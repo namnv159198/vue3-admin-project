@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { useAppStore } from '@/stores'
-import logo from "@/assets/images/logo-mu.png";
+import logo from "@/assets/images/logo-mu.png"
 
 const appStore = useAppStore()
 </script>

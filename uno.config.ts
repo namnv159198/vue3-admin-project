@@ -1,6 +1,9 @@
 // uno.config.ts
-import { defineConfig, presetAttributify, presetIcons, presetUno, presetWebFonts, transformerDirectives, transformerVariantGroup } from 'unocss'
-
+import { defineConfig, presetAttributify, presetIcons, presetUno, presetWebFonts, transformerVariantGroup } from 'unocss'
+import transformerDirectives from '@unocss/transformer-directives'
+const safelistMenuIcon = [
+ 'i-carbon:dashboard'
+]
 export default defineConfig({
   // ...UnoCSS options
   shortcuts: [
@@ -25,6 +28,7 @@ export default defineConfig({
       },
     }),
   ],
+  safelist: [...safelistMenuIcon],
   transformers: [
     transformerDirectives(), // @apply, @screen and theme() directive (@unocss/transformer-directives)
     transformerVariantGroup(), // nhóm CSS lại với nhau => hover:(bg-gray-400 font-medium) (@unocss/transformer-variant-group)
